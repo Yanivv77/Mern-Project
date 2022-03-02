@@ -1,15 +1,15 @@
-const { timeStamp } = require('console')
 const mongoose = require('mongoose')
+
 const goalSchema = mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      require: true,
+      required: true,
       ref: 'User',
     },
     text: {
       type: String,
-      require: [true, 'Please add text value'],
+      required: [true, 'Please add a text value'],
     },
   },
   {
